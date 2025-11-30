@@ -1,0 +1,24 @@
+[0.578s] Invoking command in '/home/fatmacure/ros2DockerProject/build/sensor_publisher_pkg': PYTHONPATH=/home/fatmacure/ros2DockerProject/build/sensor_publisher_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fatmacure/ros2DockerProject/install/sensor_publisher_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/fatmacure/ros2DockerProject/build/sensor_publisher_pkg/build --no-deps symlink_data
+[0.714s] running develop
+[0.795s] running egg_info
+[0.796s] creating sensor_publisher_pkg.egg-info
+[0.796s] writing sensor_publisher_pkg.egg-info/PKG-INFO
+[0.796s] writing dependency_links to sensor_publisher_pkg.egg-info/dependency_links.txt
+[0.796s] writing entry points to sensor_publisher_pkg.egg-info/entry_points.txt
+[0.796s] writing requirements to sensor_publisher_pkg.egg-info/requires.txt
+[0.796s] writing top-level names to sensor_publisher_pkg.egg-info/top_level.txt
+[0.796s] writing manifest file 'sensor_publisher_pkg.egg-info/SOURCES.txt'
+[0.797s] reading manifest file 'sensor_publisher_pkg.egg-info/SOURCES.txt'
+[0.797s] writing manifest file 'sensor_publisher_pkg.egg-info/SOURCES.txt'
+[0.798s] running build_ext
+[0.798s] Creating /home/fatmacure/ros2DockerProject/install/sensor_publisher_pkg/lib/python3.10/site-packages/sensor-publisher-pkg.egg-link (link to .)
+[0.798s] Installing sensor_publisher script to /home/fatmacure/ros2DockerProject/install/sensor_publisher_pkg/lib/sensor_publisher_pkg
+[0.798s] 
+[0.798s] Installed /home/fatmacure/ros2DockerProject/build/sensor_publisher_pkg
+[0.799s] running symlink_data
+[0.799s] creating /home/fatmacure/ros2DockerProject/install/sensor_publisher_pkg/share/ament_index
+[0.799s] creating /home/fatmacure/ros2DockerProject/install/sensor_publisher_pkg/share/ament_index/resource_index
+[0.799s] creating /home/fatmacure/ros2DockerProject/install/sensor_publisher_pkg/share/ament_index/resource_index/packages
+[0.799s] symbolically linking /home/fatmacure/ros2DockerProject/build/sensor_publisher_pkg/resource/sensor_publisher_pkg -> /home/fatmacure/ros2DockerProject/install/sensor_publisher_pkg/share/ament_index/resource_index/packages
+[0.799s] symbolically linking /home/fatmacure/ros2DockerProject/build/sensor_publisher_pkg/package.xml -> /home/fatmacure/ros2DockerProject/install/sensor_publisher_pkg/share/sensor_publisher_pkg
+[0.822s] Invoked command in '/home/fatmacure/ros2DockerProject/build/sensor_publisher_pkg' returned '0': PYTHONPATH=/home/fatmacure/ros2DockerProject/build/sensor_publisher_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fatmacure/ros2DockerProject/install/sensor_publisher_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/fatmacure/ros2DockerProject/build/sensor_publisher_pkg/build --no-deps symlink_data

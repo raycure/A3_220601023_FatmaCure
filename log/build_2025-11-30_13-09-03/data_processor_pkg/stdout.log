@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating data_processor_pkg.egg-info
+writing data_processor_pkg.egg-info/PKG-INFO
+writing dependency_links to data_processor_pkg.egg-info/dependency_links.txt
+writing entry points to data_processor_pkg.egg-info/entry_points.txt
+writing requirements to data_processor_pkg.egg-info/requires.txt
+writing top-level names to data_processor_pkg.egg-info/top_level.txt
+writing manifest file 'data_processor_pkg.egg-info/SOURCES.txt'
+reading manifest file 'data_processor_pkg.egg-info/SOURCES.txt'
+writing manifest file 'data_processor_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/fatmacure/ros2DockerProject/install/data_processor_pkg/lib/python3.10/site-packages/data-processor-pkg.egg-link (link to .)
+Installing data_processor script to /home/fatmacure/ros2DockerProject/install/data_processor_pkg/lib/data_processor_pkg
+
+Installed /home/fatmacure/ros2DockerProject/build/data_processor_pkg
+running symlink_data
+creating /home/fatmacure/ros2DockerProject/install/data_processor_pkg/share/ament_index
+creating /home/fatmacure/ros2DockerProject/install/data_processor_pkg/share/ament_index/resource_index
+creating /home/fatmacure/ros2DockerProject/install/data_processor_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/fatmacure/ros2DockerProject/build/data_processor_pkg/resource/data_processor_pkg -> /home/fatmacure/ros2DockerProject/install/data_processor_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/fatmacure/ros2DockerProject/build/data_processor_pkg/package.xml -> /home/fatmacure/ros2DockerProject/install/data_processor_pkg/share/data_processor_pkg
