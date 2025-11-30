@@ -1,6 +1,4 @@
-================================================================================
-                    ROS 2 DOCKER PROJECT - BYM412 ROBOTİK ÖDEV 3
-================================================================================
+ROS 2 DOCKER PROJECT - BYM412 ROBOTİK ÖDEV 3
 
 PROJE HAKKINDA
 ================================================================================
@@ -14,75 +12,6 @@ getiren üç ROS 2 düğümünden oluşmaktadır:
 - sensor_publisher: Sahte sensör verisi üretir
 - data_processor: Sensör verisini işler
 - command_server: Servis isteklerine yanıt verir
-
-
-SİSTEM MİMARİSİ
-================================================================================
-
-+------------------+
-|sensor_publisher  |
-|                  |
-| 0.1s aralıklarla |
-| rastgele veri    |
-+--------+---------+
-         |
-         | /sensor_value (Float32)
-         |
-         v
-+------------------+
-| data_processor   |
-|                  |
-| value × 2        |
-+--------+---------+
-         |
-         | /processed_value (Float32)
-         |
-         v
-    [Yayınlanır]
-
-+------------------+
-| command_server   |
-|                  |
-| /compute_command |
-| (Service)        |
-+------------------+
-
-
-PROJE YAPISI
-================================================================================
-
-ros2DockerProject/
-├── Dockerfile
-├── entrypoint.sh
-├── README.md
-├── SSF_HASH.txt
-├── launch/
-│   └── my_project.launch.py
-└── src/
-    ├── sensor_publisher_pkg/
-    │   ├── sensor_publisher_pkg/
-    │   │   ├── __init__.py
-    │   │   └── sensor_publisher.py
-    │   ├── package.xml
-    │   ├── setup.cfg
-    │   └── setup.py
-    ├── data_processor_pkg/
-    │   ├── data_processor_pkg/
-    │   │   ├── __init__.py
-    │   │   └── data_processor.py
-    │   ├── package.xml
-    │   ├── setup.cfg
-    │   └── setup.py
-    └── command_server_pkg/
-        ├── command_server_pkg/
-        │   ├── __init__.py
-        │   └── command_server.py
-        ├── srv/
-        │   └── ComputeCommand.srv
-        ├── package.xml
-        ├── setup.cfg
-        └── setup.py
-
 
 KURULUM VE ÇALIŞTIRMA
 ================================================================================
@@ -357,43 +286,6 @@ ros2 node list
 # Node bilgisi
 ros2 node info /sensor_publisher
 
-
-HIZLI BAŞLANGIÇ REHBERİ
-================================================================================
-
-ADIM 1: Docker İmajını Oluşturun
---------------------------------------------------------------------------------
-cd ros2DockerProject
-docker build -t myrosapp .
-
-
-ADIM 2: Konteyneri Başlatın
---------------------------------------------------------------------------------
-docker run --rm myrosapp
-
-
-ADIM 3: Yeni Terminal Açın ve Test Edin
---------------------------------------------------------------------------------
-# Konteyner ID'sini alın
-docker ps
-
-# Konteynere girin
-docker exec -it <CONTAINER_ID> bash
-
-# Ortamı yükleyin
-source /opt/ros/humble/setup.bash
-source /ws/install/setup.bash
-
-# Topic'leri kontrol edin
-ros2 topic list
-
-# Veriyi izleyin
-ros2 topic echo /processed_value
-
-# Servisi test edin
-ros2 service call /compute_command command_server_pkg/srv/ComputeCommand "{input: 12.5}"
-
-
 PROJE ÖZETİ
 ================================================================================
 
@@ -410,36 +302,6 @@ Geliştirilen sistem:
 Sistem, taşınabilir, ölçeklenebilir ve yeniden kullanılabilir bir yapıya 
 sahiptir.
 
-
-SORU-CEVAP
-================================================================================
-
-S: Docker olmadan çalıştırabilir miyim?
-C: Evet, manuel build bölümündeki adımları takip edin.
-
-S: Yeni düğüm nasıl eklerim?
-C: src/ dizininde yeni paket oluşturun ve launch dosyasına ekleyin.
-
-S: Servis yanıt vermiyor?
-C: Tam servis yolunu kullandığınızdan emin olun.
-
-S: Topic'ler görünmüyor?
-C: ROS 2 ortamını source ile yüklediğinizden emin olun.
-
-S: Konteyner durmuyor?
-C: docker stop <CONTAINER_ID> komutunu kullanın.
-
-
-PERFORMANS İPUÇLARI
-================================================================================
-
-1. Docker imaj boyutunu azaltmak için multi-stage build kullanın
-2. --symlink-install ile hızlı geliştirme yapın
-3. QoS ayarlarını optimize edin
-4. Log seviyesini ihtiyaca göre ayarlayın
-5. Gereksiz paketleri Docker imajından çıkarın
-
-
 GÜVENLİK NOTLARI
 ================================================================================
 
@@ -453,28 +315,11 @@ GÜVENLİK NOTLARI
 GELİŞTİRİCİ BİLGİLERİ
 ================================================================================
 
-Ad Soyad        : [Adınız Soyadınız]
+Ad Soyad        : Fatma Cüre
 Öğrenci No      : 220601023
 Üniversite      : İstanbul Sağlık ve Teknoloji Üniversitesi
 Ders            : BYM412 Robotik
 Dönem           : 2024-2025 Güz
-İletişim        : [email@example.com]
-
-
-FAYDALI BAĞLANTILAR
-================================================================================
-
-ROS 2 Humble Dokumentasyonu:
-https://docs.ros.org/en/humble/
-
-Docker Dokumentasyonu:
-https://docs.docker.com/
-
-ROS 2 Launch Dosyaları:
-https://docs.ros.org/en/humble/Tutorials/Intermediate/Launch/Launch-Main.html
-
-colcon Build Sistemi:
-https://colcon.readthedocs.io/
 
 
 LİSANS
@@ -485,31 +330,8 @@ Bu proje eğitim amaçlı geliştirilmiştir.
 Ödev 3 kapsamında hazırlanmıştır.
 
 
-TEŞEKKÜRLER
-================================================================================
-
-- ROS 2 Documentation Team
-- Docker Community
-- İSTE BYM412 Dersi Öğretim Üyeleri
-- Açık Kaynak Topluluğu
-
-
 SON GÜNCELLEME
 ================================================================================
 
 Tarih: Kasım 2025
 Versiyon: 1.0
-
-
-================================================================================
-                              PROJE TAMAMLANDI
-================================================================================
-
-Bu README dosyası, projenin kurulumu, kullanımı ve testi hakkında tüm 
-gerekli bilgileri içermektedir. Herhangi bir sorunla karşılaşırsanız, 
-"Bilinen Sorunlar ve Çözümler" bölümüne bakın veya iletişim bilgilerini 
-kullanarak ulaşın.
-
-Başarılar dileriz!
-
-================================================================================
